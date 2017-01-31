@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+    <!--
+    configure the machine identification.
+    -->
+    <machine execute="hostname" >
+        <parserselection row="0" column="0" />
+    </machine>
+
+    <!--
+    configure the metrics to collect.
+    -->
+    <metric name="memoryUsed" execute="free" >
+        <parserselection row="1" column="2"></parserselection>
+    </metric>
+
+    <metric name="memoryFree" execute="free" >
+        <parserselection row="1" column="3"></parserselection>
+    </metric>
+
+
+</configuration>

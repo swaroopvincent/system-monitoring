@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+    <!--
+    configure the machine identification.
+    -->
+    <machine execute="hostname" >
+        <parserselection row="0" column="0" />
+    </machine>
+
+    <!--
+    configure the metrics to collect.
+    -->
+    <metric name="FreePhysicalMemory" execute="wmic os get FreePhysicalMemory" >
+        <parserselection row="1" column="0"></parserselection>
+    </metric>
+
+    <metric name="FreeVirtualMemory" execute="wmic os get FreeVirtualMemory" >
+        <parserselection row="1" column="0"></parserselection>
+    </metric>
+
+
+</configuration>
